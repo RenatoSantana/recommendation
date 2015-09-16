@@ -1,0 +1,10 @@
+<template name="select_algorithm">
+
+  <select id="algorithm" class="pure-input-2-3">
+        {{#each algorithms}}
+
+              <option   value={{_id}} > {{description}}</option>
+        {{/each}}
+                   
+  </select>
+</template>

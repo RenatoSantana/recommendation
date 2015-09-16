@@ -1,0 +1,10 @@
+<template name="select_store">
+
+  <select id="store" class="pure-input-2-3">
+        {{#each stores}}
+
+              <option   value={{_id}} > {{name}}</option>
+        {{/each}}
+                   
+  </select>
+</template>
