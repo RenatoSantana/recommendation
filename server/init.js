@@ -47,7 +47,7 @@ if(Algorithms.find().count()==0){
  // Algorithms.insert({description:"Time Based"});
  //Algorithms.insert({description:"Content Based"});
   Algorithms.insert({description:"Simple Symilarity"});
-  Algorithms.insert({description:"Cossine Symilarity"});
+  Algorithms.insert({description:"Cosine Symilarity"});
  // Algorithms.insert({description:"Cossine Symilarity with Logarithms"});
 
 }

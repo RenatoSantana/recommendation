@@ -34,7 +34,7 @@
         <tr>
            
             <th>Categories visited(CV)</th>
-            <th>Store’s detail</th>
+            <th>Store’s detail (SD)</th>
             <th>Search performed(SP)</th>
         </tr>
     </thead>
@@ -90,14 +90,14 @@
     
     
       {{#if algorithm}}
-     <legend><b>  Result </b></legend>
+     <legend><b>  Test</b></legend>
   <div class="pure-g">
     <div class="pure-u-1-12"><table class="pure-table pure-table-horizontal">
     <thead>
         <tr>
            
             <th>Algorithm</th>
-            <th></th>
+            <th>Result</th>
            
         </tr>
     </thead>
@@ -117,6 +117,55 @@
 </table></div>
 
 </div>
+    {{/if}}
+    
+    {{#if result_stored}}
+      <legend><b>  Compare All </b></legend>
+  <div class="pure-g">
+    <div class="pure-u-1-12"><table class="pure-table pure-table-horizontal">
+    <thead>
+        <tr>
+           
+            <th>Algorithm</th>
+            <th>Result</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+         
+          <td><b>Cosine Symilarity</b></td>
+            <td>{{result_cosine}}</td>
+            
+         
+        </tr>
+      
+      <tr>
+         
+           
+        <td><b>Simple Symilarity</b></td>
+            <td>{{result_simple}}</td>
+            
+         
+        </tr>
+      
+      <tr>
+         
+            
+        <td><b>Stored Based</b></td>
+            <td>{{result_stored}}</td>
+         
+        </tr>
+
+    
+
+       
+    </tbody>
+</table></div>
+
+</div>
+    
     {{/if}}
   </form>
 

@@ -18,7 +18,7 @@
           var result =storedBased(user, store);
 
           Session.set('result', result);
-       }else if(algorithm.description==='Cossine Symilarity'){
+       }else if(algorithm.description==='Cosine Symilarity'){
 
           var result =textCosineSimilarity(user.searchPerformed, store.tags);
 
@@ -31,6 +31,7 @@
           Session.set('result_simple', result_simple);
           var result_stored =storedBased(user, store);
           Session.set('result_stored', result_stored);
+          Session.set('algorithm',0);
        }
     }
   });
@@ -38,6 +39,15 @@
 Template.index.helpers({
     result: function () {
       return Session.get('result');
+    },
+   result_cosine: function () {
+      return Session.get('result_cosine');
+    },
+   result_simple: function () {
+      return Session.get('result_simple');
+    },
+   result_stored: function () {
+      return Session.get('result_stored');
     },
     user:function(){
           return Session.get('user');
@@ -48,6 +58,5 @@ Template.index.helpers({
     algorithm:function(){
       return  Session.get('algorithm');
     }
-   
-  
+
 });
