@@ -1,4 +1,4 @@
- Template.index.events({
+ Template.index2.events({
 
    'submit form': function(e) {
                  e.preventDefault();
@@ -36,7 +36,7 @@
     }
   });
 
-Template.index.helpers({
+Template.index2.helpers({
     result: function () {
       return Session.get('result');
     },

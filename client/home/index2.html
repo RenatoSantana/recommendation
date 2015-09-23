@@ -1,0 +1,71 @@
+<template name="index">
+  <h1>Selection of some recommendations systems</h1>
+
+  <form class="pure-form pure-form-stacked" style="margin-top: 40px;" >
+     <fieldset>
+
+        <div class="pure-g">
+             <div class="pure-u-md-1-2 pure-u-lg-1-4">
+                <label for="user">User Model</label>
+                  {{> select_user}}
+            </div>
+
+             <div class="pure-u-md-1-2 pure-u-lg-1-4">
+
+                <label for="algorithm">Algorithm Recommendation</label>
+                       {{>select_algorithm}}
+             </div>
+             <div class="pure-u-md-1-2 pure-u-lg-1-4">
+
+                <button style="margin-top: 25px;" type="submit" class="button-xlarge pure-button pure-button-primary">Run</button>
+             </div>
+        </div>
+    </fieldset>
+
+     {{#if results}}
+     <legend><b>  Store Model </b></legend>
+  <div class="pure-g">
+    <div class="pure-u-md-1-2 pure-u-lg-1-4">
+      <table class="pure-table pure-table-horizontal">
+    <thead>
+        <tr>
+           
+            <th>Name</th>
+            <th>Category</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+
+    <tbody>
+      
+        
+          {{#each results}}
+         <tr>
+            <td>{{name}}</td>
+            <td>{{category}}</td>
+            <td>{{score}}</td>
+            </tr>
+          {{/each}}
+            
+    
+
+    
+
+       
+    </tbody>
+</table>
+    </div>
+     <div class="pure-u-md-1-2 pure-u-lg-1-4" style="margin-left:120px"> 
+        <legend><b>  Recall  {{recall}}</b></legend>
+        <legend><b>  Precision {{precision}} </b></legend>
+      </div>
+</div>
+   
+
+    {{/if}}
+    
+    
+  </form>
+
+
+</template>

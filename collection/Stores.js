@@ -22,6 +22,11 @@ var object ={
     type: String,
     max: 100
   },
+  score: {
+    type: Number,
+    min:0,
+    decimal: true
+  }
 
 }
 
